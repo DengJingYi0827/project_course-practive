@@ -1,0 +1,187 @@
+@font-face {
+  font-family: "cwTeXYen";
+  font-style: normal;
+  font-weight: 500;
+  src: url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.eot);
+  src: url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.eot?#iefix)
+      format("embedded-opentype"),
+    url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.woff2)
+      format("woff2"),
+    url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.woff) format("woff"),
+    url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.ttf)
+      format("truetype");
+}
+
+* {
+  box-sizing: border-box;
+}
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  min-height: 100vh;
+  background: #fbf6e6;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 6.25rem;
+  height: 6.25rem;
+  margin: 10px;
+}
+.container:hover .talkbox1,
+.container2:hover .talkbox2 {
+  opacity: 1;
+}
+.talkbox1 {
+  position: absolute;
+  display: flex;
+  font-family: "cwTeXYen";
+  padding: 20px;
+  font-weight: bold;
+  border-radius: 30px;
+  color: rgb(209, 31, 46);
+  left: -220px;
+  top: -50px;
+  align-items: center;
+  text-align: center;
+  width: 200px;
+  height: 100px;
+  background-color: white;
+  opacity: 0;
+  transition: 1s;
+}
+.container2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 6.25rem;
+  height: 6.25rem;
+  margin: 10px;
+}
+.talkbox2 {
+  position: absolute;
+  display: flex;
+  font-family: "cwTeXYen";
+  font-weight: bold;
+  padding: 20px;
+  color: rgb(209, 31, 46);
+  border-radius: 30px;
+  right: -220px;
+  top: -50px;
+  align-items: center;
+  text-align: center;
+  width: 200px;
+  height: 100px;
+  background-color: white;
+  opacity: 0;
+  transition: 1s;
+}
+
+button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+}
+button.face-button {
+  width: 6.25rem;
+  height: 6.25rem;
+  border-radius: 50%;
+  background: #fdda5f;
+  box-shadow: inset 2px -4px 18px #fd9744;
+}
+button.face-button2 {
+  width: 6.25rem;
+  height: 6.25rem;
+  border-radius: 50%;
+  background: #5fddfd;
+  box-shadow: inset 2px -4px 18px #4450fd;
+}
+
+.face-container {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 20px;
+  margin: auto;
+}
+.face-container2 {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 20px;
+  margin: auto;
+}
+.eye {
+  position: absolute;
+  height: 0.5rem;
+  width: 0.5rem;
+  background: #2a2927;
+  border-radius: 50%;
+  animation: eyeBlink 3200ms linear infinite;
+}
+.eye.left {
+  left: 0;
+}
+.eye.right {
+  left: 2rem;
+}
+
+.mouth {
+  position: absolute;
+  top: 1.125rem;
+  left: 0.8rem;
+  width: 1rem;
+  height: 0.125rem;
+  background: #2a2927;
+  border-radius: 0;
+}
+
+.eye,
+.mouth {
+  box-shadow: inset 1px 2px 4px #121110;
+}
+
+.face-button:hover .mouth,
+.face-button:active .mouth,
+.face-button2:hover .mouth,
+.face-button2:active .mouth {
+  left: 1rem;
+  width: 0.5rem;
+  height: 0.4rem;
+  border-radius: 1rem 1rem 0.125rem 0.125rem;
+}
+.face-button:hover .eye,
+.face-button:active .eye,
+.face-button2:hover .eye,
+.face-button2:active .eye {
+  height: 0.375rem;
+  width: 0.375rem;
+  box-shadow: 0 0 0 0.25rem #fff;
+}
+
+@keyframes eyeBlink {
+  0%,
+  30%,
+  36%,
+  100% {
+    transform: scale(1);
+  }
+  32%,
+  34% {
+    transform: scale(1, 0);
+  }
+} /*# sourceMappingURL=index.css.map */

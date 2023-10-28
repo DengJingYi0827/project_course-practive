@@ -1,0 +1,44 @@
+.carouseAll {
+  position: relative;
+  display: flex;
+  width: 90%;
+}
+
+.carousel {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  /* background-color: #dbb4b4; */
+}
+.content {
+  width: auto;
+  height: auto;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 0;
+}
+.btnContainer {
+  /* margin: 10px auto; */
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.btn {
+  position: absolute;
+  z-index: 5;
+  width: 80px;
+  border: none;
+  height: 100%;
+  opacity: 0.5;
+  font-size: 30px;
+}
+.btn-next {
+  right: 0;
+}
+.btn-prev {
+  left: 0;
+}
+.image {
+  width: 100%;
+}
